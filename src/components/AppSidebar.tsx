@@ -20,7 +20,8 @@ const navigation = [
 ];
 
 const AppSidebar = () => {
-  const { collapsed } = useSidebar();
+  const { state } = useSidebar();
+  const collapsed = state === "collapsed";
   const location = useLocation();
 
   const getNavLinkClass = ({ isActive }: { isActive: boolean }) => {
@@ -32,7 +33,7 @@ const AppSidebar = () => {
   return (
     <Sidebar
       className={`border-r ${collapsed ? "w-16" : "w-64"}`}
-      collapsible
+      collapsible="icon"
     >
       <div className="flex h-16 items-center justify-center border-b">
         {collapsed ? (

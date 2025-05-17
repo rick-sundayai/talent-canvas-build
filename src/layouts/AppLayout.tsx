@@ -7,7 +7,7 @@ import AppHeader from "@/components/AppHeader";
 
 const AppLayout = () => {
   return (
-    <SidebarProvider collapsedWidth={64}>
+    <SidebarProvider>
       <div className="min-h-screen flex w-full bg-background">
         <AppSidebar />
         <div className="flex flex-col flex-1">
