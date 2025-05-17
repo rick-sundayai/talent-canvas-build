@@ -14,9 +14,9 @@ import {
 } from "@/components/ui/sidebar";
 
 const navigation = [
-  { name: "Dashboard", path: "/", icon: LayoutDashboard },
-  { name: "Jobs", path: "/jobs", icon: Briefcase },
-  { name: "Candidates", path: "/candidates", icon: Users },
+  { name: "Dashboard", path: "/app", icon: LayoutDashboard },
+  { name: "Jobs", path: "/app/jobs", icon: Briefcase },
+  { name: "Candidates", path: "/app/candidates", icon: Users },
 ];
 
 const AppSidebar = () => {
@@ -58,7 +58,7 @@ const AppSidebar = () => {
               {navigation.map((item) => (
                 <SidebarMenuItem key={item.name}>
                   <SidebarMenuButton asChild>
-                    <NavLink to={item.path} end={item.path === "/"} className={getNavLinkClass}>
+                    <NavLink to={item.path} end={item.path === "/app"} className={getNavLinkClass}>
                       <item.icon className="h-5 w-5" />
                       {!collapsed && <span>{item.name}</span>}
                     </NavLink>

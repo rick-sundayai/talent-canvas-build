@@ -10,6 +10,8 @@ import Jobs from "./pages/Jobs";
 import Candidates from "./pages/Candidates";
 import JobDetails from "./pages/JobDetails";
 import CandidateDetails from "./pages/CandidateDetails";
+import LandingPage from "./pages/LandingPage";
+import { LoginPage, SignupPage } from "./pages/AuthPages";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -21,7 +23,10 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<AppLayout />}>
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/signup" element={<SignupPage />} />
+          <Route path="/app" element={<AppLayout />}>
             <Route index element={<Dashboard />} />
             <Route path="jobs" element={<Jobs />} />
             <Route path="jobs/:id" element={<JobDetails />} />
